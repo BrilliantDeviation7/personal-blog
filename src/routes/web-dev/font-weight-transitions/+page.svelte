@@ -41,11 +41,13 @@
       <a href="#different-apparent-font-weight-between-browsers">Different apparent font weight between browsers</a>
     </h5>
     <p>
-      I&#39;ve now learned that font-weights can look very different between Firefox and Microsoft Edge (and thus
-      Chrome). Not sure why yet, but I&#39;ll look into it. <code class="inline-code-block">font-weight: 900</code>
-      is significantly bolder on Firefox than Edge 🤔 and
-      <em>does</em>
-       look much better on Firefox.
+      <del>
+        I&#39;ve now learned that font-weights can look very different between Firefox and Microsoft Edge (and thus
+        Chrome). Not sure why yet, but I&#39;ll look into it. <code class="inline-code-block">font-weight: 900</code>
+        is significantly bolder on Firefox than Edge 🤔 and
+        <em>does</em>
+         look much better on Firefox.
+      </del>
     </p>
     <p>
       <ImgZoom
@@ -61,6 +63,23 @@
         Font weight on Microsoft Edge
       </ImgZoom>
     </p>
+    <h6 id="jan-8-2023-update"><a href="#jan-8-2023-update">Jan 8, 2023 update</a></h6>
+    <p>
+      Turns out I forgot to add <code class="inline-code-block">font-weight: 100 900;</code>
+      under
+      <code class="inline-code-block">@font-face</code>
+       section; this fixed the transitions on Microsoft Edge and Chrome.
+    </p>
+    <InfoBox statusType="caution">
+      <p>
+        Make sure to include <code class="inline-code-block">font-weight: 100 900;</code>
+        inside
+        <code class="inline-code-block">@font-face</code>
+        . This specifies the range that is supported by the font and is
+        <em>required</em>
+         for font-weight transitions.
+      </p>
+    </InfoBox>
     <h4 id="locally-host-variable-font-from-google-fonts">
       <a href="#locally-host-variable-font-from-google-fonts">Locally host variable font from Google Fonts</a>
     </h4>
@@ -73,19 +92,19 @@
       </li>
       <li>Add font in stylesheets (shown below using this blog&#39;s font as an example):</li>
     </ol>
-    <div class="code-block  ">
+    <div class="code-block  showLineNumber">
       <CodeCopy>
         <pre><code
-            class="language-css">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Commissioner"</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"../fonts/Commissioner-VariableFont_wght.woff2"</span><span class="token punctuation">)</span></span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff2-variations"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">:root</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Commissioner"</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div>`}</code></pre>
+            class="language-css">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Commissioner"</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100 900<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">4</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"../fonts/Commissioner-VariableFont_wght.woff2"</span><span class="token punctuation">)</span></span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff2-variations"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">5</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">6</span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">7</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">:root</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">8</span><span class="no-line-diff"></span></div><div class="code-content">  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Commissioner"</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">9</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <h4 id="using-css-transitions-on-font-weight">
       <a href="#using-css-transitions-on-font-weight">Using CSS transitions on font-weight</a>
     </h4>
-    <div class="code-block  ">
+    <div class="code-block  showLineNumber">
       <CodeCopy>
         <pre><code
-            class="language-css">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">h1</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">transition</span><span class="token punctuation">:</span> font-weight 0.25s<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">h1:hover</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-weight</span><span class="token punctuation">:</span> 900<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="no-line-number"></span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div>`}</code></pre>
+            class="language-css">{@html String.raw`<div class="code-line"><div class="code-linenotation"><span class="line-number">1</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">h1</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">2</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">3</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">transition</span><span class="token punctuation">:</span> font-weight 0.25s<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">4</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">5</span><span class="no-line-diff"></span></div><div class="code-content"></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">6</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token selector">h1:hover</span> <span class="token punctuation">{</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">7</span><span class="no-line-diff"></span></div><div class="code-content">    <span class="token property">font-weight</span><span class="token punctuation">:</span> 900<span class="token punctuation">;</span></div></div><div class="code-line"><div class="code-linenotation"><span class="line-number">8</span><span class="no-line-diff"></span></div><div class="code-content"><span class="token punctuation">}</span></div></div>`}</code></pre>
       </CodeCopy>
     </div>
     <p>Thanks for reading!</p>
