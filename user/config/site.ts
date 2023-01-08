@@ -12,10 +12,10 @@ import Avatar_512_PNG from '$assets/avatar.png?w=512&h=512&imagetools';
 import SiteCover from '$assets/qwer.webp';
 
 export const siteConfig: Site.Config = {
-  url: 'https://svelte-qwer.vercel.app',
-  title: 'QWER',
-  subtitle: '🚀 QWER - Built using Svelte with ❤',
-  description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
+  url: 'https://blog-brilliantdeviation7.vercel.app',
+  title: 'BrilliantDeviation7',
+  subtitle: 'Built with svelte-QWER',
+  description: 'Kevin Zhu\'s Blog',
   lang: 'en',
   timeZone: 'America/New_York',
   since: 2023,
