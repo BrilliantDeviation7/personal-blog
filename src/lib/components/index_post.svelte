@@ -80,7 +80,7 @@
           src={data.cover}
           imgClass="z1 blur-sm op80 absolute object-cover w-full h-full transition transform duration-300 ease-in-out group-hover:(scale-110 blur-none)" />
         <div class="coverStyle-IN z2 px8 pt4 pb6 flex flex-col gap2 bg-white/[0.25] dark:bg-black/[0.25]">
-          <time class="dt-published op80 group-hover:font-600" datetime={data.published} itemprop="datePublished">
+          <time class="dt-published op80" datetime={data.published} itemprop="datePublished">
             {postPublishedStr}
           </time>
           <time class="hidden dt-updated" datetime={data.updated} itemprop="dateModified">
@@ -91,7 +91,7 @@
               {data.title}
             </a>
           </h2>
-          <p class="text-lg line-clamp-2 group-hover:font-600" itemprop="description">{data.summary}</p>
+          <p class="text-lg line-clamp-2" itemprop="description">{data.summary}</p>
         </div>
       {:else}
         <div class:flex-col={['TOP', 'BOT'].indexOf(data.coverStyle) !== -1} class="flex md:border-none relative">
@@ -110,7 +110,7 @@
             </a>
           </div>
           <div class="index-post-panel px8 pt4 pb6 flex flex-col gap2 flex-1">
-            <time class="dt-published op80 group-hover:font-600" datetime={data.published} itemprop="datePublished">
+            <time class="dt-published op80" datetime={data.published} itemprop="datePublished">
               {postPublishedStr}
             </time>
             <time class="hidden dt-updated" datetime={data.updated} itemprop="dateModified">
@@ -121,13 +121,13 @@
                 {data.title}
               </a>
             </h2>
-            <p class="text-lg line-clamp-2 group-hover:font-600" itemprop="description">{data.summary}</p>
+            <p class="text-lg line-clamp-2" itemprop="description">{data.summary}</p>
           </div>
         </div>
       {/if}
     {:else}
       <div class="index-post-panel flex flex-col flex-1 gap2 px8 pt4 pb6">
-        <time class="dt-published op80 group-hover:font-600" datetime={data.published} itemprop="datePublished">
+        <time class="dt-published op80" datetime={data.published} itemprop="datePublished">
           {postPublishedStr}
         </time>
         <time class="hidden dt-updated" datetime={data.updated} itemprop="dateModified">
@@ -144,7 +144,7 @@
           </a>
         </h2>
         {#if data.summary}
-          <p class="text-lg line-clamp-2 group-hover:font-600" itemprop="description">{data.summary}</p>
+          <p class="text-lg line-clamp-2" itemprop="description">{data.summary}</p>
         {/if}
       </div>
     {/if}

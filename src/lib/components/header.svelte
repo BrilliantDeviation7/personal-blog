@@ -124,7 +124,7 @@
     <nav
       id="header-nav"
       class:backdrop-blur={scrollY > scrollThresholdStep}
-      class="py-2 px-4 min-h-4rem max-h-16 {scrollY >= scrollThresholdStep ? 'shadow-lg' : ''}"
+      class="py-1 px-2 min-h-4rem max-h-16 {scrollY >= scrollThresholdStep ? 'shadow-lg' : ''}"
       in:fly={{ x: -50, duration: 300, delay: 300 }}
       out:fly={{ x: -50, duration: 300 }}>
       {#if curPost && scrollY > scrollThresholdStep}
