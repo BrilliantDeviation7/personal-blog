@@ -107,18 +107,13 @@ export const giscusConfig: Giscus.Config = {
 };
 
 export const navConfig: (DD.Nav | DD.Link)[] = [
+  // {
+  //   name: 'About',
+  //   url: '/about',
+  // },
   {
-    name: 'About',
-    url: '/about',
-  },
-  {
-    name: 'See Docs 📄',
-    url: 'https://docs-svelte-qwer.vercel.app/',
-    rel: 'external',
-  },
-  {
-    name: 'Get QWER 🚀',
-    url: 'https://github.com/kwchang0831/svelte-QWER',
+    name: 'GitHub',
+    url: 'https://github.com/BrilliantDeviation7/personal-blog',
     rel: 'external',
   },
 ];
