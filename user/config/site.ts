@@ -17,14 +17,14 @@ export const siteConfig: Site.Config = {
   subtitle: '🚀 QWER - Built using Svelte with ❤',
   description: '🚀 QWER - Awesome Blog Starter, Built using Svelte with ❤',
   lang: 'en',
-  timeZone: 'Asia/Taipei',
-  since: 2022,
+  timeZone: 'America/New_York',
+  since: 2023,
   cover: SiteCover,
   author: {
-    name: 'John Doe',
+    name: 'Kevin Zhu',
     status: '🚀',
     statusTip:
-      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >QWER</a> is Awesome !',
+      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >QWER</a> is awesome!',
     avatar: Avatar,
     avatar_128: Avatar_128,
     avatar_48_png: Avatar_48_PNG,
@@ -32,9 +32,9 @@ export const siteConfig: Site.Config = {
     avatar_192_png: Avatar_192_PNG,
     avatar_512_png: Avatar_512_PNG,
     website: 'https://github.com/kwchang0831/svelte-QWER',
-    github: 'https://github.com/kwchang0831',
-    email: 'contact@kwchang0831.dev',
-    bio: `Peace begins <br/> With a smile`,
+    github: 'https://github.com/BrilliantDeviation7',
+    // email: 'contact@kwchang0831.dev',
+    bio: `😔There's an unstoppable trend toward randomization of the universe as a whole.`,
   },
 };
 
