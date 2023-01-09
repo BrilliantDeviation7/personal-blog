@@ -63,6 +63,18 @@
         Font weight on Microsoft Edge
       </ImgZoom>
     </p>
+    <p>
+      <ImgZoom
+        src="C:\web-dev\font-weight-transitions\firefox-font-weight.png"
+        alt="firefox-font-weight.png"
+        width="435"
+        height="129" />
+      <ImgZoom
+        src="C:\web-dev\font-weight-transitions\edge-font-weight.png"
+        alt="edge-font-weight.png"
+        width="430"
+        height="127" />
+    </p>
     <h6 id="jan-8-2023-update"><a href="#jan-8-2023-update">Jan 8, 2023 update</a></h6>
     <p>
       Turns out I forgot to add <code class="inline-code-block">font-weight: 100 900;</code>

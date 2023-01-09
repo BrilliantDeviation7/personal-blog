@@ -31,6 +31,9 @@ It took me 30 minutes or so to figure out how to use them and get a single .woff
 <ImgZoom src="/web-dev/font-weight-transitions/firefox-font-weight.png" alt="Image of font weight on Firefox browser" class="h-full object-cover">Font weight on Mozilla Firefox</ImgZoom>
 <ImgZoom src="/web-dev/font-weight-transitions/edge-font-weight.png" alt="Image of font weight on Microsoft Edge browser" class="h-full object-cover">Font weight on Microsoft Edge</ImgZoom>
 
+![firefox-font-weight.png](./firefox-font-weight.png)
+![edge-font-weight.png](./edge-font-weight.png)
+
 ###### Jan 8, 2023 update
 
 Turns out I forgot to add `font-weight: 100 900;` under `@font-face` section; this fixed the transitions on Microsoft Edge and Chrome.
