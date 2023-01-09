@@ -22,22 +22,11 @@ Here's are two articles on using variable fonts on the web from CSS-Tricks:
 - [One File, Many Options: Using Variable Fonts on the Web](https://css-tricks.com/one-file-many-options-using-variable-fonts-web/)
 - [#259: How to use variable fonts](https://css-tricks.com/newsletter/259-how-to-use-variable-fonts/)
 
-It took me 30 minutes or so to figure out how to use them and get a single .woff2 file from Google Fonts, so I guess I'm also writing this as reference for the future.
-
-##### Different apparent font weight between browsers
-
-~~I've now learned that font-weights can look very different between Firefox and Microsoft Edge (and thus Chrome). Not sure why yet, but I'll look into it. `font-weight: 900` is significantly bolder on Firefox than Edge 🤔 and _does_ look much better on Firefox.~~
-
-<ImgZoom src="/web-dev/font-weight-transitions/firefox-font-weight.png" alt="Image of font weight on Firefox browser" class="h-full object-cover">Font weight on Mozilla Firefox</ImgZoom>
-<ImgZoom src="/web-dev/font-weight-transitions/edge-font-weight.png" alt="Image of font weight on Microsoft Edge browser" class="h-full object-cover">Font weight on Microsoft Edge</ImgZoom>
-
-###### Jan 8, 2023 update
-
-Turns out I forgot to add `font-weight: 100 900;` under `@font-face` section; this fixed the transitions on Microsoft Edge and Chrome.
+It took me a while to figure out how to use them and get a single .woff2 file from Google Fonts, so I guess I'm also writing this as reference for the future.
 
 :::caution
 
-Make sure to include `font-weight: 100 900;` inside `@font-face`. This specifies the range that is supported by the font and is _required_ for font-weight transitions.
+Make sure to include `font-weight: 100 900;` inside `@font-face`. This specifies the range that is supported by the font and is _required_ for font-weight transitions. Without this, the font-weight may not show in Chrome and Microsoft Edge browsers (based on my observations).
 
 :::
 
@@ -63,7 +52,6 @@ Make sure to include `font-weight: 100 900;` inside `@font-face`. This specifies
 #### Using CSS transitions on font-weight
 
 ```css
-/// showLineNumber
 h1 {
     font-weight: 100;
     transition: font-weight 0.25s;
