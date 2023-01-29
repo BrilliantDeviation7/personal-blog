@@ -22,9 +22,9 @@ export const siteConfig: Site.Config = {
   cover: SiteCover,
   author: {
     name: 'Kevin Zhu',
-    status: '🚀',
+    status: '💻',
     statusTip:
-      '<a href="https://github.com/kwchang0831/svelte-QWER" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >QWER</a> is awesome!',
+      'Check out my Printables <a href="https://www.printables.com/social/223978-brilliantdeviation7/about" rel="external" style="color:#0F0" onMouseOver="this.style.color=\'#0FF\'" onMouseOut="this.style.color=\'#0F0\'" >profile</a>!',
     avatar: Avatar,
     avatar_128: Avatar_128,
     avatar_48_png: Avatar_48_PNG,
