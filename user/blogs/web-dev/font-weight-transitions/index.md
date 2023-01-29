@@ -10,6 +10,7 @@ cover: ./willkommen.png
 coverStyle: 'TOP'
 coverCaption: Demonstration of different font weights (<a href="https://fonts.google.com/specimen/Commissioner">download font</a>)
 tags:
+  - Web-Dev
   - CSS
 ---
 
