@@ -4,8 +4,8 @@ description: How to animate font-weight without jarring transition
 summary: Use variable fonts to smoothly animate font-weight
 published: '2023-01-07T20:28:02.247Z'
 updated: '2023-01-08T18:19:53.860Z'
-series_tag: 'Web Dev'
-series_title: 'Variable Fonts'
+series_tag: 'Web-Dev'
+series_title: 'Web Development'
 cover: ./willkommen.png
 coverStyle: 'TOP'
 coverCaption: Demonstration of different font weights (<a href="https://fonts.google.com/specimen/Commissioner">download font</a>)
