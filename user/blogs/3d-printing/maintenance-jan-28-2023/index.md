@@ -10,7 +10,7 @@ cover: ./post-cover-dde.png
 coverStyle: 'TOP'
 coverCaption: 'My 3D-printed <a href="https://www.thingiverse.com/thing:3386628">direct drive adapter</a>; I recommend finding another design with the extruder closer to the hot end'
 tags:
-  - 3D-Printing
+  - Maintenance-Log
 ---
 
 ### About My Printer
