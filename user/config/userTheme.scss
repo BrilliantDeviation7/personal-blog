@@ -9,7 +9,7 @@
 }
 
 :root {
-  --qwer-bg-color: #e1e3dd;
+  --qwer-bg-color: #E3F3EC;
   --qwer-text-color: black;
   font-family: "Commissioner", sans-serif;
 
@@ -17,11 +17,29 @@
     --qwer-strong-font-weight: 800;
     --qwer-strong-color: rgb(0, 136, 55);
   }
+
+  .index-post {
+    --qwer-bg-color: #B8E0CF;
+  }
 }
 
 .dark {
+  --qwer-bg-color: #180227;
+
   .prose {
     --qwer-strong-font-weight: 800;
     --qwer-strong-color: rgb(81, 198, 81);
+  }
+
+  .index-post {
+    --qwer-bg-color: #453F78;
+  }
+
+  #post {
+    --qwer-bg-color: #2F2A58;
+  }
+
+  #post-bottom {
+    --qwer-bg-color: #262244;
   }
 }
